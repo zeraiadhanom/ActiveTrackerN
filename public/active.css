@@ -1,0 +1,129 @@
+
+
+body {
+
+background: url("/img/BG5.jpg");	
+	
+}
+
+.activityMainContainer {
+	margin-left:20%;
+	margin-right:20%;
+	margin-top: 90px;
+	width: 90%;
+}
+
+ .header, .content{
+  float: left;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  text-align: center;
+  
+  }
+  
+  .heading {
+	  
+	  border: 1px solid black;
+	  text-align: center;
+	  padding-top: 20px;
+	  border-radius: 5px;
+	  
+  }
+  
+  .header {
+	  width: 10.5%;
+	  background: black;
+	  color: white;
+	  border: 1px solid white;
+  }
+  
+  .row .content: {
+	  margin: auto;
+  }
+  
+  .content input {
+	  width: 100%;
+	  
+  }
+  
+  .content {
+	    width: 10.5%;    
+  }
+
+.row{
+  overflow: hidden;
+  
+}
+
+
+.errorMsg3 {
+	display: none;
+	color: red;
+	text-align: center;
+}
+
+
+.save_button1 {
+	display: none;
+} 
+
+input {
+  float: left;
+  width: 10.5%;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2.5px;
+} 
+
+.logout {
+
+position:fixed;
+right:30px;
+height: 30px;
+text-align: center;
+border: 1px solid black;
+border-radius: 20px;
+width: 100px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+background: black;
+color: white;
+position: absolute;
+cursor: pointer;
+}
+
+#idInput {
+	
+	display: none;
+}
+
+ #userID {
+	
+	display: none;
+}
+
+ .id {
+	
+	display: none;
+	
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .activityMainContainer  {
+         width:75%;
+		/*width:75%;*/
+        margin-left:19%; 
+        margin-right:19%; 
+    }
+   .header, .content, input{
+        width:75%;
+		
+    }
+}
+ 
+

@@ -1,0 +1,13 @@
+ActiveTracker is an app to help users track their daily sport activities; Users can record
+their sport activity - type of sport, time spent, location/venue etc;
+
+As a user, I should be able to sign up for ActiveTracker;
+As a user, I should be able to log in to ActiveTracker
+As a user, I should be able to post new sport activities;
+As a user, I should be able to list all sport activites
+As a user, I should be able to see recent activities acomplished;
+
+As a user, I should be able to remove recorded activites from detabase;
+
+As a user, I should be able to leave comments on and update new activities;
+As a user, I should be able to logout successfuly;

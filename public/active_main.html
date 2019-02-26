@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>repl.it</title>
+      <link href="active.css" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <div class="heading">
+      <button class="logout">Logout</button>
+      <h2>Recent Activities<h2>   
+  </div>
+    <div class="activityMainContainer">
+	<p class="errorMsg3">Please fill required fields correctly: "activity","time" & "location"</p>
+      <div class="row">
+        <div class="header">
+          Activity </div>
+        <div class="header">
+          Distance[miles]
+        </div>
+        <div class="header">
+          Time [hrs]
+        </div>
+        <div class="header">
+          Location
+        </div>
+        <div class="header">
+          Comment
+        </div>
+		<div class="header">
+        </div>
+		<div class="header">
+        </div>
+        <div class="last">
+        </div>
+      </div>
+      <div class="row">
+	  
+        <div class="content">
+          <input placeholder="activity" type="text" id="new_activity" required>
+        </div>
+        <div class="content">
+          <input placeholder="distance" type="text" id="new_distance">
+        </div>
+        <div class="content">
+          <input placeholder="time" type="text" id="new_time" required>
+        </div>
+        <div class="content">
+          <input placeholder="location" type="text" id="new_location" required>
+        </div>
+        <div class="content">
+          <input placeholder="comment" type="text" id="new_comment">
+        </div>
+		
+        <div class="content">
+          <input type="button" class="add" value="Add activity">
+        </div>
+		<div class="content">
+          <input type="button" class="" value="">
+        </div>
+		<div class="row">
+		</div>
+      </div>
+    </div>
+
+
+    <script
+          src="https://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+        <script src="./active_main.js" type="text/javascript"></script> 
+        <script src="./client.js" type="text/javascript"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>

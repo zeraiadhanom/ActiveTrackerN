@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+    padding: 0;
+	background: url("/img/BG1.jpg");
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+	border: 1px solid black;
+}
+
+  .main   {
+   
+    /*text-align: center*/
+	background-color: green;
+}
+
+.required {
+	display: none;
+	font-size: 14px;
+	color: red;	
+}
+
+button {
+        
+   position:fixed;
+   top:30px; 
+   right:30px;
+   width: 120px;
+   height: 50px;
+   background: black;
+   color: white;
+   text-size: 25px;
+   border: 1p solid black;
+   border-radius: 10px;
+}
+
+.logo {
+
+	/*position:fixed;*/
+	 top:30px; 
+	 left:30px;
+	 width: 80px;
+	 height: 80px;
+     border: 1px solid black;
+     border-radius: 50px;
+	
+      
+}
+.login2 {
+	
+	margin-top: 60px;
+	width: 320px;
+	Height: 520px;
+	background:#000;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 15px 15px;
+}
+
+h1 {
+
+	margin: 0;
+	padding: 10 0 10;
+	text-align: center;
+	font-size: 2px;
+}
+
+.login2 p {
+
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.login2 input {
+
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.login2 input[type="text"], input[type="password"]
+
+{
+	border: none;
+	border-bottom:1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color:#fff;
+	font-size: 16px;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+ .login2 {
+	 disply: block;
+ }
+ 
+}
