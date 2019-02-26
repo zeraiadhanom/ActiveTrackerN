@@ -48,7 +48,8 @@ background: url("/img/BG5.jpg");
   }
   
   .content {
-	    width: 10.5%;    
+	    width: 10.5%; 
+        height: 45px;		
   }
 
 .row{
@@ -75,6 +76,7 @@ input {
   box-sizing: border-box;
   text-align: center;
   border-radius: 2.5px;
+  height: 30px;
 } 
 
 .logout {

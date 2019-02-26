@@ -66,20 +66,23 @@ function register() {
        }
     };
        fetch('/users', settings)
-	      .then(response => {
-	 	  if (response.ok){
+          .then(response => {
+           if (response.ok){
             return response.json();
-            JSalert(); //alert user if registration is successful.     
-		 }
-    	})
-	    .then(responseJson => {
+             //alert user if registration is successful.     
+         }
+         else{
+             throw new Error("Something went wrong");
+         }
+        })
+        .then(responseJson => {
+            alert("Successful registration");
             $(location).attr("href", "./index.html");
-    	})
-	    .catch(err => {
-		console.log(err);
-		$('.required').show();
-		alert('please check if fields filled correctly')
-	});
+        })
+        .catch(err => {
+        console.log(err);
+        $('.required').show();
+    });
     })
 }
 

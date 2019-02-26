@@ -15,11 +15,15 @@ fetch('/sports', settings)
         if (response.ok){
             return response.json(); 
         }
+        else{
+          throw new Error("You need to be authenticated");
+        }
     })
     .then(responseJson => {
     display(responseJson)    
     })
     .catch(err => {
+         $(location).attr("href", "./index.html");
         console.log(err);
     });
 }
@@ -35,7 +39,7 @@ function display(responseJson) {
    <input class="activity" type="text" value="${responseJson[i].activity}" readonly>
    <input class="distance" type="text" value="${responseJson[i].distanceCovered}" readonly>
    <input class="time" type="text" value="${responseJson[i].timeElapsed}" readonly>
-   <input class="comment" type="text" value="${responseJson[i].location}" readonly>
+   <input class="location" type="text" value="${responseJson[i].location}" readonly>
    <input class="comment" type="text" value="${responseJson[i].comment}" readonly>
    <input type="button" class="edit_button1" value="Edit" class="edit">
    <input type="button" class="save_button1" value="Save" class="save">
@@ -229,7 +233,7 @@ function update() {
    let id = $(this).closest('.row').find('.id').val();
    let activity = $(this).closest('.row').find('.activity').val();
    
-   let distanceCovered = $(this).closest('tr').find('.distance').val();
+   let distanceCovered = $(this).closest('.row').find('.distance').val();
    let timeElapsed = $(this).closest('.row').find('.time').val();
    let location = $(this).closest('.row').find('.location').val(); 
    let comment = $(this).closest('.row').find('.comment').val(); 
