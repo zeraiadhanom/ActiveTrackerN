@@ -6,7 +6,7 @@ and help them look for imporvemetn. Users can sate what activity they have done 
 
 SCreenshots:
 
-<img src="/Docs/login.png" alt="Koa middleware framework for nodejs"/>
+<img src="/Docs/login.png" alt="login screen"/>
 
 
 
