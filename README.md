@@ -2,10 +2,23 @@
 ActiveTracker:
 
 ActiveTracker is for anyone who wants to keep a record of their daily/weekly sport activity & to reflect their achiviement
-and help them look for imporvemetn. Users can sate what activity they have done for the day, for how long, where,and can add a comment;
+and help them look for improvements. Users can sate what activity they have done for the day, for how long, where,and can add a comment;
 
 SCreenshots:
-![ActiveTracker Logo](ActiveTrackerN/Docs/login.PNG?raw=true)
+
+Login:
+
+![ActiveTracker login](/Docs/login.PNG)
+
+Register:
+
+![ActiveTracker login](/Docs/register.PNG)
+
+Activites:
+
+![ActiveTracker login](/Docs/Activities.PNG)
+
+
 
 User Stories:
 
