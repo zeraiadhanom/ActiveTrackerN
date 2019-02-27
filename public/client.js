@@ -68,8 +68,7 @@ function register() {
        fetch('/users', settings)
           .then(response => {
            if (response.ok){
-            return response.json();
-             //alert user if registration is successful.     
+            return response.json();    
          }
          else{
              throw new Error("Something went wrong");
@@ -77,6 +76,7 @@ function register() {
         })
         .then(responseJson => {
             alert("Successful registration");
+			Swal('Successful registration!')
             $(location).attr("href", "./index.html");
         })
         .catch(err => {
@@ -95,7 +95,7 @@ function logout() {
 	$('.logout').on('click', function(e){
 	 e.preventDefault();
 	 login();
-     console.log('is this working')
+	 
 	 let settings = {
         method: "get",
        // body: JSON.stringify(data),
@@ -117,17 +117,22 @@ function logout() {
 	 })
 	 .catch(err => {
 	 console.log(err);
-	 alert('please check if fields filled correctly')
 	 }) 
 	});
 } 
 
+//whenever logo is clicked, user should be direct to login page for authentication.
+
+function logoClick() {
+$('.logo').on('click', function(e){
+	console.log('does this work');
+ $(location).attr("href", "./index.html");
+});
+} 
+
+$(logoClick);
 $(register);
 $(logout);
 
 
  
-
-
-
-

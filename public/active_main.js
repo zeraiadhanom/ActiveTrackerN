@@ -120,8 +120,12 @@ function deleteItem() {
      
      fetch(`/sports/${id}`, settings)
       .then(response => {
-     if (response.ok){   
+     if (response.ok){
+		 return response.json();
        }
+	   else{
+          throw new Error("You need to be authenticated");
+        }
     })
        .then(responseJson => {  
    $($(this).closest(".row")).remove();
@@ -129,23 +133,13 @@ function deleteItem() {
     
     })
        .catch(err => {
-      console.log(err);
+		//$(location).attr("href", "./index.html");
+        console.log(err);
     }); 
             
    })
  } 
     
-/*function missingFields() {
-	
- $('.activityMainContainer').on('click', '.add', function(e) {
-	 e.preventDefault();
-	 $('.errorMsg3').show();
-	 
- });
-	 
-} */
-
-//$(missingFields);
 
     //adding a new activity
     
@@ -181,20 +175,20 @@ function deleteItem() {
             if (response.ok){
                 return response.json();
           }
+		   else{
+              throw new Error("You need to be authenticated");
+            }
          })
          .then(responseJson => {
-        
-	   console.log(responseJson)
-	    addLoadPage();
-	   
-         })
-         .catch(err => {  
-            
-         console.log(err);
-		// alert('something went wrong')
-		 $('.errorMsg3').show();
-		 addLoadPage();
          
+	   console.log(responseJson)
+	 
+         })
+         .catch(err => { 
+			  $('.errorMsg3').show();
+			
+			  alert("Please fill required fields:'Activity','Time','Location'");
+			  swal("Cancelled", "Your imaginary file is safe :)", "error");
        });
         
       })
@@ -212,15 +206,15 @@ function pageloadOnedit() {
 
 $(pageloadOnedit);
 	
-function pageload() {
+/*function pageload() {
 	$('.add').on('click', function(e){
 		e.preventDefault();
 		//addNewEntry()
 		location.reload(false);	
 	})
-}
+} */
 
-$(pageload);
+//$(pageload);
 
 function update() {
   
