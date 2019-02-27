@@ -5,7 +5,7 @@ ActiveTracker is for anyone who wants to keep a record of their daily/weekly spo
 and help them look for imporvemetn. Users can sate what activity they have done for the day, for how long, where,and can add a comment;
 
 SCreenshots:
-![ActiveTracker Logo]("./Docs/login.png")
+![ActiveTracker Logo](/Docs/login.png)
 
 User Stories:
 
