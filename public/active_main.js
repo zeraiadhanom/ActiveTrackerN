@@ -4,12 +4,13 @@ function getAllactivites() {
  
 
 let settings = {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-    "Authorization" : "Bearer " + token
+   method: "GET",
+   headers: {
+     "Content-Type": "application/json",
+     "Authorization" : "Bearer " + token
   }
 };
+
 fetch('/sports', settings)
     .then(response => {
         if (response.ok){
@@ -28,7 +29,8 @@ fetch('/sports', settings)
     });
 }
 
-//display activities on webpage
+// Show all activities on display 
+
 function display(responseJson) {
    
         for (let i = 0; i < responseJson.length; i++){
@@ -70,6 +72,8 @@ $('.activityMainContainer').on('click', '.edit_button1',function(e) {
  });  
 }
 
+// Releadpage after a new item is added 
+
 function addLoadPage() {
  $('.activityMainContainer').on('click', '.add', function(e){
 		e.preventDefault();
@@ -108,6 +112,7 @@ function deleteItem() {
    
     edit();
    let id = $(this).closest('.row').find('.id').val();
+   swal("Deleted!", "Your imaginary file has been deleted!", "success");
     alert('Are you sure you want to delete the item? Deleting is PERMANENT. You will not be able to recover the data.');
 
    let settings = {
@@ -158,41 +163,49 @@ function deleteItem() {
         $('#new_location').val('')
         const comment = $('#new_comment').val()
         $('#new_comment').val('')
-		 
+		
+         let data = {activity, distanceCovered, timeElapsed, location, comment};
+		  console.log(data.activity, data.timeElapsed);
+         if (data.activity === '' || data.timeElapsed === '' || data.location) {
+			   $('.errorMsg3').show();
+			   alert("Please fill activity, time, & location");
+			   swal("Please fill activity, time, & location");
+		    } else {
+				
+            let settings = {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+               "Authorization" : "Bearer " + token,
+               "Content-Type": "application/json"
+               }
     
-        let data = {activity, distanceCovered, timeElapsed, location, comment}   
-        let settings = {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-           "Authorization" : "Bearer " + token,
-           "Content-Type": "application/json"
-           }
-    
-        };
-        fetch('/sports/create', settings)
-           .then(response => {
-            if (response.ok){
-                return response.json();
-          }
-		   else{
-              throw new Error("You need to be authenticated");
-            }
-         })
-         .then(responseJson => {
+              };
+              fetch('/sports/create', settings)
+              .then(response => {
+               if (response.ok){
+                  return response.json();
+               }
+		        else{
+                  throw new Error("You need to be authenticated");
+               }
+             })
+             .then(responseJson => {
          
-	   console.log(responseJson)
+	         console.log(responseJson)
 	 
-         })
-         .catch(err => { 
-			  $('.errorMsg3').show();
+             })
+			 
+             .catch(err => { 
+			   $('.errorMsg3').show();
+			  //alert("Please fill required fields:'Activity','Time','Location'");
+			  
+            });
 			
-			  alert("Please fill required fields:'Activity','Time','Location'");
-			  swal("Cancelled", "Your imaginary file is safe :)", "error");
-       });
-        
-      })
-    } 
+			}
+          })
+      } 
+	
 	
 function pageloadOnedit() {
 	$('.activityMainContainer').on('click', '.save_button1', function(e){
