@@ -44,7 +44,7 @@ As a user, I should be able to logout successfuly;
 
 Working Prototype:
 
- ---> give a link to the page:
+ -> https://mysterious-brook-32861.herokuapp.com/ 
 
 
 
