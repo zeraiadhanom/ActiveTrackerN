@@ -112,7 +112,8 @@ function deleteItem() {
    
     edit();
    let id = $(this).closest('.row').find('.id').val();
-   swal("Deleted!", "Your imaginary file has been deleted!", "success");
+   
+   //sweetAlert('You successfully deleted item', 'success', 30000, false);
     alert('Are you sure you want to delete the item? Deleting is PERMANENT. You will not be able to recover the data.');
 
    let settings = {
@@ -126,7 +127,7 @@ function deleteItem() {
      fetch(`/sports/${id}`, settings)
       .then(response => {
      if (response.ok){
-		 return response.json();
+		// return response.json();
        }
 	   else{
           throw new Error("You need to be authenticated");
@@ -166,11 +167,7 @@ function deleteItem() {
 		
          let data = {activity, distanceCovered, timeElapsed, location, comment};
 		  console.log(data.activity, data.timeElapsed);
-         if (data.activity === '' || data.timeElapsed === '' || data.location) {
-			   $('.errorMsg3').show();
-			   alert("Please fill activity, time, & location");
-			   swal("Please fill activity, time, & location");
-		    } else {
+         //if (data.activity === '' || data.timeElapsed === '' || data.location) { 
 				
             let settings = {
                 method: "POST",
@@ -201,8 +198,7 @@ function deleteItem() {
 			  //alert("Please fill required fields:'Activity','Time','Location'");
 			  
             });
-			
-			}
+		
           })
       } 
 	
