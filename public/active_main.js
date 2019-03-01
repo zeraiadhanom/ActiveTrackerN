@@ -75,13 +75,11 @@ $('.activityMainContainer').on('click', '.edit_button1',function(e) {
 // Releadpage after a new item is added 
 
 function addLoadPage() {
- $('.activityMainContainer').on('click', '.add', function(e){
-		e.preventDefault();
-		  location.reload(false); 	
- });	
+
+		  location.reload(false);
 }
 
-$(addLoadPage);
+
 
 
 
@@ -151,7 +149,7 @@ function deleteItem() {
     
     function addNewEntry() {
        
-        $('.add').on('click', function(){
+        $('.add').on('click', function(event){
             event.preventDefault();
 		
         const activity = $('#new_activity').val();
@@ -167,7 +165,13 @@ function deleteItem() {
 		
          let data = {activity, distanceCovered, timeElapsed, location, comment};
 		  console.log(data.activity, data.timeElapsed);
-         //if (data.activity === '' || data.timeElapsed === '' || data.location) { 
+         if (data.activity === '' || data.timeElapsed === '' || data.location === '') {
+              
+			  $('.errorMsg3').show();
+			  //alert('please fill required fields')
+		 }
+           else {		 
+		      
 				
             let settings = {
                 method: "POST",
@@ -188,6 +192,7 @@ function deleteItem() {
                }
              })
              .then(responseJson => {
+				 addLoadPage();
          
 	         console.log(responseJson)
 	 
@@ -198,7 +203,8 @@ function deleteItem() {
 			  //alert("Please fill required fields:'Activity','Time','Location'");
 			  
             });
-		
+		   }
+			
           })
       } 
 	
