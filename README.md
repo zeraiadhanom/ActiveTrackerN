@@ -27,7 +27,7 @@ and what it does. The description would help me decide wether to create an accou
 
 As a visitor, i should have a way to try the ActiveTracker app how it works using demo login account;
 
-As a user, I should be able to sign up for ActiveTracker;
+As a user, I should be able to sign up & be able to create an account with ActiveTracker;
 As a user, I should be able to log in to ActiveTracker
 As a user, I should be able to post new sport activities;
 As a user, I should be able to list all sport activites
@@ -39,10 +39,11 @@ As a user, I should be able to leave comments on and update new activities;
 As a user, I should be able to logout successfuly;
 
 
-
 Working Prototype:
 
- -> https://mysterious-brook-32861.herokuapp.com/ 
+Please try to login: Username: Demo 
+                     Passowrd: Demo123456
+ https://mysterious-brook-32861.herokuapp.com/
 
 
 
