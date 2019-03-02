@@ -41,9 +41,10 @@ As a user, I should be able to logout successfuly;
 
 Working Prototype:
 
-Please try to login: Username: Demo 
+Please try to login: Username: Demo;
                      Passowrd: Demo123456
- https://mysterious-brook-32861.herokuapp.com/
+                     
+  -->  https://mysterious-brook-32861.herokuapp.com/
 
 
 
