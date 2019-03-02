@@ -28,7 +28,8 @@ background: url("/img/BG5.jpg");
 	  text-align: center;
 	  padding-top: 20px;
 	  border-radius: 5px;
-	  
+	  margin-right: 0;
+	  margin-left: 0;
   }
   
   .header {
@@ -54,14 +55,20 @@ background: url("/img/BG5.jpg");
 
 .row{
   overflow: hidden;
-  
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
 .errorMsg3 {
 	display: none;
 	color: red;
-	text-align: center;
+	padding-left:8%;
+    font-size: 20px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
 }
 
 
@@ -72,7 +79,7 @@ background: url("/img/BG5.jpg");
 input {
   float: left;
   width: 10.5%;
-  padding: 5px;
+ /* padding: 5px; */
   box-sizing: border-box;
   text-align: center;
   border-radius: 2.5px;
@@ -95,6 +102,7 @@ background: black;
 color: white;
 position: absolute;
 cursor: pointer;
+font-size:20px;
 }
 
 #idInput {
@@ -115,17 +123,17 @@ cursor: pointer;
 
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1002px) {
     .activityMainContainer  {
-         width:75%;
-		/*width:75%;*/
+         width:90%;
         margin-left:19%; 
         margin-right:19%; 
     }
-   .header, .content, input{
-        width:75%;
+  .errorMsg3, .header, .content, input{
+        width:70%;
 		
     }
 }
  
+
 

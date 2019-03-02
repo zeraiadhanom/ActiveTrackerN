@@ -72,16 +72,15 @@ $('.activityMainContainer').on('click', '.edit_button1',function(e) {
  });  
 }
 
-// Releadpage after a new item is added 
+// Re-loadpage after a new item is added 
 
 function addLoadPage() {
 
-		  location.reload(false);
+	location.reload(false);
 }
 
 
-
-
+// Event listner, when save button is clicked
 
 function save() {
 
@@ -107,11 +106,9 @@ function deleteItem() {
   $('.activityMainContainer').on('click', '.delete', function(e) {
 	 
     e.preventDefault();
-   
     edit();
    let id = $(this).closest('.row').find('.id').val();
    
-   //sweetAlert('You successfully deleted item', 'success', 30000, false);
     alert('Are you sure you want to delete the item? Deleting is PERMANENT. You will not be able to recover the data.');
 
    let settings = {
@@ -168,7 +165,6 @@ function deleteItem() {
          if (data.activity === '' || data.timeElapsed === '' || data.location === '') {
               
 			  $('.errorMsg3').show();
-			  //alert('please fill required fields')
 		 }
            else {		 
 		      
@@ -193,43 +189,29 @@ function deleteItem() {
              })
              .then(responseJson => {
 				 addLoadPage();
-         
-	         console.log(responseJson)
 	 
              })
 			 
              .catch(err => { 
 			   $('.errorMsg3').show();
-			  //alert("Please fill required fields:'Activity','Time','Location'");
-			  
+	
             });
 		   }
 			
-          })
-      } 
+         })
+     } 
 	
 	
 function pageloadOnedit() {
-	$('.activityMainContainer').on('click', '.save_button1', function(e){
-		e.preventDefault();
-		//update();
-		console.log('working?')
-		location.reload(false);	
-		
-	})
+	$('.activityMainContainer').on('click', '.save_button1',function(e) {
+    e.preventDefault();
+	
+	location.reload(false);	
+	});	
 }
 
 $(pageloadOnedit);
 	
-/*function pageload() {
-	$('.add').on('click', function(e){
-		e.preventDefault();
-		//addNewEntry()
-		location.reload(false);	
-	})
-} */
-
-//$(pageload);
 
 function update() {
   
@@ -265,7 +247,8 @@ function update() {
 			}
 		   })
 	    .then(responseJson => {
-			pageloadOnedit()
+			//pageloadOnedit()
+			 addLoadPage();
 			console.log(responseJson);
          
          })

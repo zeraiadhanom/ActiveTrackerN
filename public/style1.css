@@ -1,5 +1,5 @@
 body {
-	margin-top: 80px;;
+	margin-top: 90px;;
     padding: 0;
 	background: url("/img/BG1.jpg");
 	background-size: cover;
@@ -24,7 +24,7 @@ body {
 	 height: 50px;
      background: black;
      color: white;
-     text-size: 25px;
+     font-size: 17px;
      border: 1p solid black;
      border-radius: 10px;
 }
@@ -44,9 +44,10 @@ button {
 	 height: 50px;
      background: black;
      color: white;
-     text-size: 25px;
+     font-size: 20px;
      border: 1p solid black;
      border-radius: 10px;
+	 
 }
 
 
@@ -67,7 +68,7 @@ button {
 }
 .login {
 	
-	margin-top: 150px;
+	margin-top: 180px;
 	width: 320px;
 	Height: 420px;
 	background:#000;
@@ -100,6 +101,7 @@ button {
 
 	width: 100%;
 	margin-bottom: 20px;
+	font-size: 20px;
 }
 
 .login input[type="text"], input[type="password"]
@@ -124,7 +126,8 @@ button {
 	margin-right: auto;
 	margin-left: auto;
 	color: white;
-	padding-bottom: 2%;
+	padding-bottom: 5%;
+	
 	
 } 
 
